@@ -96,7 +96,14 @@
             .item-hot{
                 width: 100%;
                 margin: 0;
+                .word{
+                 padding: 0 20px;
+                }
+                & h3{
+                    font-size: 20px;
+                }
             }
+            
         }
         .video_contain {
             width: 320px;

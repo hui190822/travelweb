@@ -455,6 +455,9 @@ header {
        .item-hot{
            margin: 0 10px;
            width: 33.33333%;
+           & h3{
+               font-size: 26px;
+           }
            & img{
                 width: 100%;
            }

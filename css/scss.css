@@ -560,6 +560,10 @@ header .rwd_menu li a {
   width: 33.33333%;
 }
 
+.sec_3 .container .item-hot h3 {
+  font-size: 26px;
+}
+
 .sec_3 .container .item-hot img {
   width: 100%;
 }

@@ -1,0 +1,127 @@
+$white-color:#fff;
+$primary-color:#1b262c;
+$secondary-color:#0f4c81;
+$tertiary-color:#ed6663;
+$light-color:#ffa372;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: '微軟正黑體', 'Avenir', Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: $primary-color;
+}
+
+.wrapper {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    .weather {
+        @media screen and (max-width: 576px) {
+            margin-bottom: 20px;
+        }
+        display: inline-block;
+        color: $white-color;
+        &__title {
+            margin-top: 4px;
+            background-color: $secondary-color;
+            width: 290px;
+            border-radius: 4px;
+            text-align: center;
+            letter-spacing: 10px;
+            h1 {
+                padding: 10px;
+            }
+        }
+        &__box {
+            margin-top: 4px;
+            background-color: $secondary-color;
+            width: 290px;
+            border-radius: 4px;
+        }
+        &__icon {
+            display: inline-block;
+            width: 100px;
+            height: 90px;
+            margin: 10px;
+            vertical-align: top;
+        }
+        &__content {
+            display: inline-block;
+            margin: 10px 5px;
+            height: 90px;
+            h3 {
+                letter-spacing: 2px;
+            }
+            .temp {
+                position: relative;
+                margin: 5px 0;
+                .fa-thermometer-empty {
+                    transform: rotate(30deg);
+                    margin: 0 2px;
+                }
+                i {
+                    font-style: normal;
+                    letter-spacing: 2px;
+                    &:last-child {
+                        &::before {
+                            content: '~';
+                            margin: 0 5px;
+                        }
+                    }
+                }
+            }
+            .rain {
+                position: relative;
+                letter-spacing: 2px;
+                margin-top: 5px;
+            }
+        }
+    }
+    .map {
+        svg {
+            display: inline-block;
+            max-width: 100%;
+            width: 428.59px;
+            height: 560px;
+            @media screen and (max-width: 576px) {
+                height: 100%;
+            }
+            path {
+                transition: all .3s ease-in-out;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+                fill: transparent;
+                stroke: $white-color;
+                stroke-width: 1px;
+                stroke-miterlimit: 10;
+                cursor: pointer;
+                &:hover {
+                    fill: rgba($color: $tertiary-color, $alpha: 0.5);
+                }
+            }
+            .is-active {
+                fill: rgba($color: $tertiary-color, $alpha: 0.5);
+            }
+        }
+    }
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background: rgba($color: $secondary-color, $alpha: 0.7);
+    color: $white-color;
+    text-align: center;
+    width: 80px;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 6px;
+}

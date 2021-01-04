@@ -1161,6 +1161,10 @@ header .rwd_menu li a {
   background: #143975;
 }
 
+.search > .weatherpage a {
+  text-decoration: none;
+}
+
 .sec_6 .joinus {
   position: relative;
   width: 600px;

@@ -954,6 +954,16 @@ header {
     }
 }
 
+// button style
+
+button .search{
+   border: 0;
+   background-color:#003C9D;
+    color:#fff;
+    border-radius:10px;
+    cursor:pointer;
+}
+
 .search > .weatherpage a {
     text-decoration: none;
 }

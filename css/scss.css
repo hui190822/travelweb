@@ -1161,6 +1161,14 @@ header .rwd_menu li a {
   background: #143975;
 }
 
+button .search {
+  border: 0;
+  background-color: #003C9D;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
 .search > .weatherpage a {
   text-decoration: none;
 }
